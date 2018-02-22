@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::resource('answers', 'Answers\AnswersController');
 Route::resource('exams', 'Exams\ExamsController');
+Route::resource('forms', 'Forms\FormsController');
