@@ -18,7 +18,7 @@ class CreateAnswersTable extends Migration
             $table->integer('question_id')->unsigned();
             $table->integer('option_id')->nullable()->unsigned();
             $table->integer('form_id')->unsigned();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('question_id')->references('id')->on('questions');
