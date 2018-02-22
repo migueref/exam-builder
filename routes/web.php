@@ -19,3 +19,7 @@ Route::resource('exams', 'Exams\ExamsController');
 Route::resource('forms', 'Forms\FormsController');
 Route::resource('options', 'Options\OptionsController');
 Route::resource('questions', 'Questions\QuestionsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
