@@ -1,95 +1,105 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
 
-        <title>Laravel</title>
+<head>
+  <meta charset="utf-8">
+  <!--Import Google Icon Font-->
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+  <link href="https://www..edu.mx/favicon.png" type="image/x-icon" rel="shortcut icon">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen de admisión</title>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <!-- Adding CKEDITOR -->
+  <script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<body class="blue-grey lighten-5">
+  <header>
+    <div class="navbar-fixed">
+      <nav class="navbar-fixed blue-grey darken-4 white-text fixed" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="https://www..edu.mx/exam/index.php/main/" class="button-collapse"><i class="material-icons">menu</i></a>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+          <a id="logo-container" href="//.edu.mx" style="color:black;" class="brand-logo"><b><h5 class="white-text middle-xs">Centro Universitario </h5></b></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://www..edu.mx/exam/index.php/main/" style="color:white;">Exámenes</a></li>
+          </ul>
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
-    </body>
+      </nav>
+    </div>
+  </header>
+  <!-- Examen doctorado -->
+  <main class="row">
+    <div class=" col m2"></div>
+    <article class="card small-padding col s12 m4">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://www.colegiozamora.edu.mx/wp-content/uploads/2012/08/examen-en-EE-EE.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">EXAMEN DE ADMISIÓN AL DOCTORADO  <i class="material-icons right">more_vert</i></span>
+        <p><a href="send/1">Ir al examen</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Estimado Postulante<i class="material-icons right">close</i></span>
+        <br>
+        <b>EXAMEN DE ADMISIÓN AL DOCTORADO  </b>
+        <p>
+          Debido al alto número de solicitudes de admisión,  realiza una prueba en línea para conocer su perfil vocacional y dominio de la competencia comunicativa respecto a la redacción y comprensión de textos. Esta prueba se divide en dos partes: diagnóstico
+          vocacional y análisis de redacción y comprensión de textos académicos. En el proceso de admisión solo se tendrá en cuenta esto último, en complemento con la evaluación global del currículum vitae y publicaciones. </p>
+      </div>
+    </article>
+    <article class="card small-padding col s12 m4">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://www.colegiozamora.edu.mx/wp-content/uploads/2012/08/examen-en-EE-EE.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">EXAMEN DE ADMISIÓN A LA MAESTRÍA<i class="material-icons right">more_vert</i></span>
+        <p><a href="send/2">Ir al examen</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Estimado Postulante<i class="material-icons right">close</i></span>
+        <br>
+        <b>EXAMEN DE ADMISIÓN A LA MAESTRÍA</b>
+        <p>
+          Debido al alto número de solicitudes de admisión,  realiza una prueba en línea para conocer su perfil vocacional y dominio de la competencia comunicativa respecto a la redacción de textos. Esta prueba se divide en dos partes: diagnóstico vocacional
+          y redacción y comprensión de textos académicos. En el proceso de admisión solo se tendrá en cuenta esto último, en complemento con la evaluación global del currículo vitae. </p>
+      </div>
+    </article>
+    <div class=" col m2"></div>
+  </main>
+  <footer class="bottom-xs page-footer relative bottom blue-grey darken-3">
+    <div class="container bottom">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text">Centro Universitario </h5>
+          <p class="grey-text text-lighten-4"> es un instituto de altos estudios enfocado en la investigación, la formación y la innovación en educación, emprendimiento y talento humano.  está conformado por investigadores de diversos países de Iberoamérica en gestión educativa,
+            gestión del talento humano, certificación de la calidad organizacional, diseño curricular, evaluación y certificación de competencias.</p>
+        </div>
+        <div class="col l4 s12"></div>
+        <div class="col l4 s12" style="overflow: hidden;"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © Centro Universitario .
+        <a class="grey-text text-lighten-4 right" href="https://.edu.mx/Formatos/aviso_privacidad_.pdf">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function() {
+      $('select').material_select();
+
+    });
+  </script>
+</body>
+
 </html>
