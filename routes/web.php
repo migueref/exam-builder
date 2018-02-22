@@ -18,3 +18,4 @@ Route::resource('answers', 'Answers\AnswersController');
 Route::resource('exams', 'Exams\ExamsController');
 Route::resource('forms', 'Forms\FormsController');
 Route::resource('options', 'Options\OptionsController');
+Route::resource('questions', 'Questions\QuestionsController');
