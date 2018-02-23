@@ -16,9 +16,10 @@ Route::get('/', function () {
 });
 Route::resource('answers', 'Answers\AnswersController');
 Route::resource('exams', 'Exams\ExamsController');
-Route::resource('forms', 'Forms\FormsController');
+Route::resource('doctoral', 'Forms\DoctoralController');
 Route::resource('options', 'Options\OptionsController');
 Route::resource('questions', 'Questions\QuestionsController');
+Route::resource('master', 'Forms\MasterController');
 
 Auth::routes();
 

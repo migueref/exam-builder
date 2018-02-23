@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Forms;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class FormsController extends Controller
+class MasterController extends Controller
 {
     /**
      * Display a listing of the resource.
