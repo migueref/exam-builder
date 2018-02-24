@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Forms;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Exam;
 class MasterController extends Controller
 {
     /**
@@ -14,7 +14,9 @@ class MasterController extends Controller
      */
     public function index()
     {
-        //
+        $exam = Exam::find(2);
+
+        return view('forms.exam',['exam'=>$exam]);
     }
 
     /**
