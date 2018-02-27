@@ -13,6 +13,7 @@ class Answer extends Model
     public function option()
     {
        return $this->belongsTo('App\Option');
+
     }
     public function form()
     {

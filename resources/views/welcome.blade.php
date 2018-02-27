@@ -28,7 +28,7 @@
 
           <a id="logo-container" href="//.edu.mx" style="color:black;" class="brand-logo"><b><h5 class="white-text middle-xs">Centro Universitario </h5></b></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="https://www..edu.mx/exam/index.php/main/" style="color:white;">Exámenes</a></li>
+            <li><a href="{{ url('/') }}" style="color:white;">Exámenes</a></li>
           </ul>
 
 
@@ -45,7 +45,7 @@
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">EXAMEN DE ADMISIÓN AL DOCTORADO  <i class="material-icons right">more_vert</i></span>
-        <p><a href="send/1">Ir al examen</a></p>
+        <p><a href="{{ url("/doctoral/create") }}">Ir al examen</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Estimado Postulante<i class="material-icons right">close</i></span>
@@ -62,7 +62,7 @@
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">EXAMEN DE ADMISIÓN A LA MAESTRÍA<i class="material-icons right">more_vert</i></span>
-        <p><a href="send/2">Ir al examen</a></p>
+        <p><a href="{{ url("/master/create") }}">Ir al examen</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Estimado Postulante<i class="material-icons right">close</i></span>

@@ -2,7 +2,7 @@
 @section('title',$exam->name)
 @section('content')
 
-  <form class="" action="master" method="post">
+  <form class="container" action="/master" method="post">
     {{ csrf_field() }}
     <section id="generales">
       <article>
@@ -14,25 +14,41 @@
       <p>Esta parte solo es de diagnóstico y no se tendrá en cuenta en la admisión. Sin embargo, es obligatorio complementar todos los puntos. No hay respuestas buenas ni malas. Es solo para orientarle mejor en el tipo de contenidos y actividades.</p>
       <h3>Datos de aplicante</h3>
       <div class="row">
-        <div class="input-field col s6 m6 l6">
-          <input id="nombres" name="nombres" type="text" class="validate" required>
-          <label for="nombres">Nombres</label>
+        <div class="input-field col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="name" placeholder="John">
+            <small id="name" class="form-text text-muted">Escribe tu(s) nombre(s) aquí.</small>
+          </div>
         </div>
-        <div class="input-field col s6 m6 l6">
-          <input id="apaterno" name="apaterno" type="text" class="validate" required>
-          <label for="apaterno">Apellido paterno</label>
+        <div class="input-field col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label for="lastname">Apellido paterno</label>
+            <input type="text" class="form-control" name="lastname" id="lastname" aria-describedby="lastname" placeholder="Doe">
+            <small id="lastname" class="form-text text-muted">Escribe tu primer apellido aquí.</small>
+          </div>
         </div>
-        <div class="input-field col s6 m6 l6">
-          <input id="amaterno" name="amaterno" type="text" class="validate" required>
-          <label for="amaterno">Apellido materno</label>
+        <div class="input-field col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label for="middlename">Apellido materno</label>
+            <input type="text" class="form-control" name="middlename" id="middlename" aria-describedby="middlename" placeholder="Doe">
+            <small id="middlename" class="form-text text-muted">Escribe tu segundo apellido aquí.</small>
+          </div>
         </div>
-        <div class="input-field col s6 m6 l6">
-          <input id="email" name="email" type="text" class="validate" required>
-          <label for="email">Email</label>
+        <div class="input-field col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="email" placeholder="johndoe@ejemplo.com">
+            <small id="email" class="form-text text-muted">Escribe tu dirección de email aquí.</small>
+          </div>
         </div>
-        <div class="input-field col s6 m6 l6">
-          <input id="ciudad" name="ciudad" type="text" class="validate" required>
-          <label for="ciudad">Ciudad</label>
+        <div class="input-field col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label for="city">Ciudad</label>
+            <input type="text" class="form-control" name="city" id="city" aria-describedby="city" placeholder="Doe">
+            <small id="city" class="form-text text-muted">Escribe tu ciudad.</small>
+          </div>
+
         </div>
       </div>
 
@@ -51,7 +67,7 @@
                   <br>12. La idea principal del texto es:
                 </span>
               @else
-                <span class="card-title">{{ $question->name }}</span>span>
+                <span class="card-title">{{ $question->name }}</span>
               @endif
               <div class="col s12">
                 @foreach($question->options as $option)
@@ -77,7 +93,7 @@
               <li>Colocarle un t&iacute;tulo acad&eacute;mico acorde con contenido.</li>
               </ol>
               <div class="col s12">
-                <textarea name="editor1"></textarea>
+                <textarea class="ckeditor" name="question{{$question->id}}"></textarea>
               </div>
 
             </div>
@@ -85,9 +101,19 @@
           @endif
 
         @endforeach
+        <div class="row">
+          <div class="col-md-1 col-lg-1">
 
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <input type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-success" value="Enviar">
+          </div>
+          <div class="col-md-1 col-lg-1">
+
+          </div>
+        </div>
       </div>
-      <input type="submit" class="btn btn-success" value="Enviar">
+
     </section>
 
   </form>

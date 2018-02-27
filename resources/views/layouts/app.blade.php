@@ -14,11 +14,11 @@
 </head>
 <body>
     @include('layouts.partials.header')
-    <main class="container">
+    <main >
       @yield('content')
     </main>
     <!-- Scripts -->
-    
+
     @include('layouts.partials.scripts')
 </body>
 </html>
