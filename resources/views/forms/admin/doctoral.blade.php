@@ -3,6 +3,9 @@
 @section('content')
   <div class="card">
     <h3>Total de registros: {{ $forms->count() }}</h3>
+    <div class="text-right">
+      <a href="{{url('/export-forms',$exam->id)}}" class="btn btn-success">Exportar a Excel</a>
+    </div>
   </div>
 
     <table class="table table-responsive table-bordered">

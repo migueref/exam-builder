@@ -20,6 +20,7 @@ Route::resource('doctoral', 'Forms\DoctoralController');
 Route::resource('options', 'Options\OptionsController');
 Route::resource('questions', 'Questions\QuestionsController');
 Route::resource('master', 'Forms\MasterController');
+Route::get('/export-forms/{id}', 'ExcelController@exportForms');
 
 Auth::routes();
 
